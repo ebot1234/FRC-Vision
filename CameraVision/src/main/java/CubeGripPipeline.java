@@ -166,7 +166,9 @@ public class CubeGripPipeline {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		if (input == null) input = new Mat();
+		if (blobList == null) blob = new MatOfKeyPoint();
+		
 		blobDet.detect(input, blobList);
 	}
 
